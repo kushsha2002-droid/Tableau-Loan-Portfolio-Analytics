@@ -1,0 +1,14 @@
+# Operating-system and Tableau local files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+~$*
+# Do not commit raw copies of the workbook data as separate files.
+raw-data/
+*.hyper
+*.tde
+# Keep Tableau auto-generated backups out of version control.
+*.twbr

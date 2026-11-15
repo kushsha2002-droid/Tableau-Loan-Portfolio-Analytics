@@ -1,0 +1,6 @@
+assignment,source_filename,repo_filename,worksheets,dashboards,bytes,sha256,coverage
+Assignment 2,ISOM 845Assingment 2 kushal Rajesh Sharma.twbx,workbooks/Assignment-02-Loan-Exploration.twbx,6,0,7998915,bd337d8cd6f6bd074ec46eb0412cdc5c6459049ec4d74f143c66813404b8d07c,"Calculated fields, loan status sets, bins, custom groups, Top N parameter"
+Assignment 4,Loan_Assign 4_ Kushal Rajesh Sharma.twbx,workbooks/Assignment-04-Borrower-Comparisons.twbx,2,0,7981598,e700c2898503b2df35ee146ad4717c41e41f9a033c3ae762001c5c2ee8053c58,Median interest rates by homeownership and purpose; multivariate loan marks
+Assignment 5,Loan_Assign 5_Sharma.twbx,workbooks/Assignment-05-Geographic-Loan-Analysis.twbx,5,0,8044832,ab5d1323ffc6abaffdba292b41ebb2210b7942d0bbd58d9b4d9443fd7a1a9833,"State maps, New England regional filtering, layered income and DTI map"
+Assignment 6,Assingment 6.twbx,workbooks/Assignment-06-Interactive-Dashboards.twbx,2,5,8331883,57480900b4ccc989e23e9ffd23b204962e733cf6e7ffa38c49fa28996a8e4462,"State-level loan distributions, installment comparisons, navigation dashboards"
+Assignment 3,Loan Assingment 3 Kushal Rajesh Sharma.twb,workbooks/Assignment-03-Income-Maps-and-Trends.twb,6,0,161687,bb97a5737aec305ab23b4f46fee6bd2e5ad60ca95f6c9a01b9045c36d4358e5d,"Income by homeownership, state map, loaned amount by last-payment year (unpackaged; no embedded data)"
