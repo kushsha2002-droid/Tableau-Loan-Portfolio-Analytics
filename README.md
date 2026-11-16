@@ -135,11 +135,16 @@ Five dashboard objects:
 - Interactive dashboard layout and filter controls
 - Business-oriented data storytelling
 
-## Portfolio gallery — 16 Tableau screenshots
+## Portfolio gallery — 22 Tableau screenshots
 
-The figures below are actual screenshots of the Tableau workbooks, grouped by assignment. Screenshots illustrate worksheet outputs; they are not a substitute for interacting with the workbooks.
+The figures below are 22 actual screenshots of the Tableau workbooks, grouped by assignment. Screenshots illustrate worksheet outputs; they are not a substitute for interacting with the workbooks.
 
 ### Featured visualizations
+
+**Interactive lending dashboard — state-level loan amounts and monthly installments (Assignment 6)**
+
+![Tableau dashboard combining a U.S. state loan map, average monthly installments, and state filters](screenshots/assignment-06/dashboard-1-map-and-installments.png)
+
 
 **Geographic analysis — annual income, homeownership and debt-to-income ratio (Assignment 5)**
 
@@ -174,7 +179,30 @@ The figures below are actual screenshots of the Tableau workbooks, grouped by as
 | 5 | [Layered income / homeownership / DTI](screenshots/assignment-05/income-homeownership-dti-layered.png) | Multiple marks layers and pie composition |
 | 5 | [Map in Tableau workspace](screenshots/assignment-05/annual-income-map-tableau-view.png) | Source field configuration and visual context |
 
-Assignments 2 and 6 are included as **Tableau workbook files**; there are no screenshots from those assignments in this gallery yet.
+Assignment 2 is included as a **Tableau workbook file**; screenshots are now available for Assignments 3, 4, 5, and 6.
+
+### Assignment 6 — Dashboards and Tableau story
+
+The six screenshots below document the original interactive dashboards and story presentation from [Assignment 6](workbooks/Assignment-06-Interactive-Dashboards.twbx). They are static snapshots of Tableau views; the navigation buttons and state filters work when the workbook is opened in Tableau, not on GitHub.
+
+**Dashboard 1 — Map with monthly installment comparisons**
+
+![Loan dashboard displaying a U.S. map, bar chart of average monthly installments, and state selector](screenshots/assignment-06/dashboard-1-map-and-installments.png)
+
+**Dashboard 4 — Loan distribution by state**
+
+![Loan distribution dashboard with filled U.S. map, loaned amount legend and state selector](screenshots/assignment-06/dashboard-4-loan-distribution.png)
+
+| View | Preview | Analysis |
+| --- | --- | --- |
+| Monthly repayments | [Average installment by state](screenshots/assignment-06/avg-monthly-installment-by-state.png) | Compares average monthly installments and labeled borrower counts by state |
+| Geographic loan volume | [Loaned amount map](screenshots/assignment-06/loaned-amount-by-state-map.png) | Shows total loan amounts by state using a geographic color scale |
+| Navigation | [Dashboard table of contents](screenshots/assignment-06/dashboard-3-table-of-contents.png) | Color-coded buttons for navigating between dashboards |
+| Story conclusion | [Loan Analysis conclusion](screenshots/assignment-06/story-conclusion.png) | Summarizes geographic lending activity and contextualizes the dashboard findings |
+
+**Story conclusion**
+
+![Tableau Loan Analysis story conclusion discussing lending patterns in California, Texas, and New York](screenshots/assignment-06/story-conclusion.png)
 
 ## Reproduce and explore
 
@@ -200,7 +228,8 @@ Tableau-Loan-Portfolio-Analytics/
 ├── screenshots/
 │   ├── assignment-03/ (7 PNGs)
 │   ├── assignment-04/ (4 PNGs)
-│   └── assignment-05/ (5 PNGs)
+│   ├── assignment-05/ (5 PNGs)
+│   └── assignment-06/ (6 PNGs)
 └── docs/
     ├── workbook-inventory.csv
     ├── resume-and-linkedin.md
@@ -210,6 +239,6 @@ Tableau-Loan-Portfolio-Analytics/
 ## Publication status
 
 - **Repository visibility:** Public; the project owner has confirmed permission to share the coursework dataset.
-- **Available:** Five original Tableau workbooks and 16 original screenshots, plus documentation.
+- **Available:** Five original Tableau workbooks and 22 original screenshots, plus documentation.
 - **Note:** Tableau packaged `.twbx` files include source data. Third-party images and other bundled assets may have separate usage rights; confirm those as needed.
 - These materials show academic Tableau work, not production deployment or independently validated commercial outcomes.
