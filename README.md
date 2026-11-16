@@ -1,244 +1,167 @@
-# Tableau Loan Portfolio Analytics
+# U.S. Loan Portfolio Analytics | Tableau
 
-**Tools:** Tableau Desktop, Microsoft Excel  
-**Course:** ISOM 845 — Tableau, Suffolk University  
-**Project type:** Academic coursework (Assignments 2–6)
+**Created by Kushal Rajesh Sharma**  
+**Tools:** Tableau Desktop · Microsoft Excel · Data Visualization · Exploratory Data Analysis  
+**Scope:** 42,535 loan records · 29 loan-data fields · 21 worksheets · 5 dashboards
 
-> Tableau analysis of 42,535 U.S. loan records: who borrows, how much, and at what interest rate, across borrower income, homeownership, loan purpose and state. Built as coursework for ISOM 845 at Suffolk University.
+I built a Tableau portfolio analysis to explore **who borrows, why they borrow, how loan pricing varies across borrower groups, and how lending activity differs across U.S. states**. The project turns a multi-field loan dataset into comparative views, geographic visualizations, and interactive dashboards that make loan trends easier to understand.
 
-![Layered state map showing average income, homeownership and debt-to-income ratio](screenshots/assignment-05/income-homeownership-dti-layered.png)
+![Tableau dashboard combining state-level loan activity and average monthly installments](screenshots/assignment-06/dashboard-1-map-and-installments.png)
+
+**[Explore the dashboard screenshots](#dashboard-highlights) · [Open the Tableau workbooks](#tableau-workbooks) · [View all 22 screenshots](#complete-visualization-gallery)**
+
+## Project objectives
+
+- Compare borrower characteristics such as annual income, homeownership, and loan purpose.
+- Investigate how **interest rates, loan size, and repayment amounts** vary by borrower segment.
+- Map lending patterns across U.S. states, including focused regional analysis.
+- Build interactive Tableau views using filters, calculated fields, parameters, and layered marks.
+- Communicate findings through dashboards and a guided loan-analysis presentation.
+
+## My approach and contributions
+
+### 1. Explore and segment loan records
+
+I connected the cleaned Excel dataset to Tableau and developed exploratory views using **loan purpose, loan status, homeownership, loan amount, and borrower income**. I organized categories with custom groups and sets, created $5,000 loan-amount bins, and built **Top N** views controlled by a parameter.
+
+### 2. Analyze borrower behavior and pricing
+
+I compared **median interest rates** by homeownership and borrowing purpose, and visualized average loan size by purpose using multiple mark encodings. I used aggregation and reference lines to help distinguish individual segments from overall patterns.
+
+### 3. Build geographic and statistical views
+
+I created filled U.S. state maps, selected-state views, a New England regional filter, a state-clustering visualization, and a layered map showing **average annual income, homeownership mix, and average debt-to-income ratio**. Additional views compare averages with reference lines, quartiles, and interval bands.
+
+### 4. Design interactive Tableau dashboards
+
+I built **five dashboard objects** that bring together state-level loan maps, average monthly installments, borrower counts, filter controls, navigation buttons, and explanatory text. The concluding loan-analysis narrative summarizes what the visualizations reveal.
 
 ## Key findings
 
-Approximate values read from the rendered views (Assignments 3, 4 and 5).
+These are **descriptive observations from this dataset**, not population-wide lending estimates. Rounded values come from the saved Tableau views and should be reconfirmed in the workbooks before external use.
 
-- **Income varies sharply by homeownership.** Average annual income is highest for mortgage holders (about $84K) and lowest for borrowers with no home ownership (about $39K).
-- **Small-business loans are the largest on average (about $13K)**, while debt consolidation has by far the most loans (19,776).
-- **Pricing differs by segment.** Small-business loans carry some of the highest median interest rates in the mortgage, own and rent groups (roughly 13%), and the "Other" homeownership group has the highest medians overall (up to roughly 15%).
-- **Geography.** New Mexico has the highest average income among states (about $82K); Maine and Indiana are among the lowest.
-
-**Dashboards:** Assignment 6 contains 5 interactive dashboards (state loan-amount map, monthly-installment comparison, loan distribution and a navigation-style storyboard). Open `workbooks/Assignment-06-Interactive-Dashboards.twbx` in Tableau Desktop.
-
-## Project overview
-
-This project uses Tableau to explore U.S. loan data across borrower characteristics, loan purposes, geography, loan amounts, interest rates, and repayment measures. The work spans five Tableau workbooks (four packaged `.twbx` and one unpackaged `.twb`), progressing from foundational data exploration and parameterized filtering to comparative charts, geographic maps, and a multi-dashboard presentation.
-
-The five workbooks contain **21 Tableau worksheets and 5 dashboard objects** in total. The dashboards are in Assignment 6; Assignments 2, 3, 4, and 5 contain worksheets only. All use the same loan dataset (Assignment 3 is an unpackaged `.twb` that references the Excel file by a local path and does not embed it).
-
-## Dataset
-
-The packaged source is `Loan_Cleaned_ISOM845.xlsx` (the Assignment 4 copy has a `(2)` filename suffix). It contains three Excel sheets:
-
-| Sheet | Contents |
+| Finding | What the analysis showed |
 | --- | --- |
-| `Loan` | **42,535 loan records**, with **29 columns** including loan amount, interest rate, monthly installment, purpose, annual income, homeownership, debt-to-income ratio, state, credit measures, and loan status |
-| `Loan_Description` | Loan-status descriptions |
-| `State` | State abbreviations and full state names |
+| Income differs by homeownership | Average annual income was approximately **$84K for mortgage holders** compared with **$39K for the NONE category**. |
+| Loan purpose is associated with different loan sizes | **Small-business loans** averaged around **$13K**, while debt consolidation had the highest observed record count (**19,776 loans**). |
+| Loan pricing varies by borrower segment | Median interest rates differed across loan purposes and homeownership categories, with some groups reaching approximately **15%**. |
+| Geographic variation is substantial | State maps revealed differences in average income, total loan amounts, and monthly installments. |
+| State views support targeted comparisons | The dashboard combines **loan volume**, **average monthly installment**, and record-count labels in one workflow. |
 
-**Data note:** The project owner has confirmed permission to share the dataset. Packaged `.twbx` workbooks embed loan-level records, so users who download these files receive the underlying data. Any separately licensed third-party visuals should be reviewed independently.
+## Dashboard highlights
 
-## Workbook inventory
+### State loan activity and repayment comparison
 
-| Assignment | Worksheets | Dashboards | Main focus |
-| --- | ---: | ---: | --- |
-| 2 | 6 | 0 | Groups, sets, calculations, bins, Top N parameter |
-| 3 | 6 | 0 | Annual income by homeownership, a state map, and loaned amount by last-payment year |
-| 4 | 2 | 0 | Loan rates, purposes, homeownership, and income |
-| 5 | 5 | 0 | Geographic maps and layered marks |
-| 6 | 2 | 5 | State-level analysis and dashboard presentation |
-| **Total** | **21** | **5** | |
+The main dashboard combines a state-level loan-amount map with a horizontal comparison of **average monthly installments by state**. Filters allow a closer look at selected geographies.
 
-## Tableau analysis
+![Loan map, average monthly installment chart and state filters](screenshots/assignment-06/dashboard-1-map-and-installments.png)
 
-### Assignment 2 — Data exploration, calculations, and dynamic filtering
+### Loan distribution by geography
 
-**Workbook:** [`Assignment-02-Loan-Exploration.twbx`](workbooks/Assignment-02-Loan-Exploration.twbx) (original filename: `ISOM 845Assingment 2 kushal Rajesh Sharma.twbx`)
+A filled map uses color to show relative state-level **total loan amounts**, with a state selection control for interactive analysis.
 
-Six Tableau worksheets:
+![Loan distribution dashboard with selected-state filters](screenshots/assignment-06/dashboard-4-loan-distribution.png)
 
-- **`2.3`:** Sum of loaned amount by a loan-status set defined using the values *Charged Off* and *Fully Paid*.
-- **`2.4`:** Sum of loaned amount by a custom homeownership group; the `MORTGAGE` and `OWN` categories are combined under *Owner*.
-- **`2.5`:** Distribution of loan records across loan-amount bins with a **$5,000 bin size**.
-- **`2.6`:** Sum of a custom *Installments to income* calculation, defined as `[Monthly_Installment] / [Annual_income]`, by loan-status set. This is how the source workbook aggregates the measure; it should not be described as the average borrower ratio.
-- **`2.7`:** Top **10 employment identifiers (`Emp_ID`)** ranked by sum of monthly installments.
-- **`2.8`:** Parameter-controlled **Top N employment identifiers (`Emp_ID`)** ranked by sum of monthly installments, using a `TOP N` integer parameter with a saved value of **7**.
+### Borrower segmentation
 
-**Demonstrated skills:** Custom groups, a status set, calculated fields, numeric bins, Top N filters, and parameter-driven analysis.
+A grouped comparison shows how **median interest rates** change by homeownership category and loan purpose.
 
-### Assignment 3 — Income, geography, and payment-year views
+![Median interest rate by homeownership and loan purpose](screenshots/assignment-04/interest-rates-homeownership-purpose.png)
 
-**Workbook:** [`Assignment-03-Income-Maps-and-Trends.twb`](workbooks/Assignment-03-Income-Maps-and-Trends.twb) (original filename: `Loan Assingment 3 Kushal Rajesh Sharma.twb`)
+### Layered geographic insights
 
-Six Tableau worksheets (`3.3`-`3.8`), based on their saved shelf configuration:
+This multi-layer map combines **annual income**, **homeownership categories**, and **debt-to-income ratio** to compare geographic borrower characteristics.
 
-- **`3.3`, `3.4`, `3.6`:** Sum of annual income by homeownership category.
-- **`3.5`:** Worksheet with no fields on the row/column shelves (likely a filter, text, or legend view).
-- **`3.7`:** Filled map using Tableau's generated latitude/longitude.
-- **`3.8`:** Sum of loaned amount by year of last payment date.
+![Layered map combining income, homeownership and debt-to-income measures](screenshots/assignment-05/income-homeownership-dti-layered.png)
 
-This is an unpackaged `.twb`: it holds the workbook definition only and references the Excel dataset through a local file path, so it does not embed any loan records.
+### Navigating the analysis
 
-**Demonstrated skills:** Aggregation by category, filled maps, and date-based (yearly) trend analysis.
+I included a dashboard navigation page and a concluding narrative for users who want a guided overview of the project rather than individual worksheets.
 
-### Assignment 4 — Loan and borrower comparisons
+![Dashboard navigation table of contents](screenshots/assignment-06/dashboard-3-table-of-contents.png)
 
-**Workbook:** [`Assignment-04-Borrower-Comparisons.twbx`](workbooks/Assignment-04-Borrower-Comparisons.twbx) (original filename: `Loan_Assign 4_ Kushal Rajesh Sharma.twbx`)
+## Dataset and tools
 
-- **`Ints/Ownership`:** Median interest rate by homeownership category and loan purpose.
-- **`Marks`:** Average loan amount by loan purpose, with additional encodings for income and volume-related measures.
+The analysis uses the **Loan_Cleaned_ISOM845** Excel dataset provided for the project. The source includes a main loan table with **42,535 records and 29 columns**, a loan-status description sheet, and a state lookup sheet. Key fields include:
 
-**Demonstrated skills:** Grouped comparisons, median and average aggregations, multivariate marks, and borrower segmentation.
+- Loan amount, purpose, interest rate, monthly installment, and loan status
+- Annual income, homeownership, and debt-to-income ratio
+- U.S. state, loan grade, and selected credit-related measures
 
-### Assignment 5 — Geographic loan analysis
+**Tooling:** Tableau Desktop for calculated fields, aggregation, filtering, geographic analysis, dashboards, and data storytelling; Microsoft Excel as the source format.
 
-**Workbook:** [`Assignment-05-Geographic-Loan-Analysis.twbx`](workbooks/Assignment-05-Geographic-Loan-Analysis.twbx) (original filename: `Loan_Assign 5_Sharma.twbx`)
+**Metric note:** One exploratory worksheet calculates monthly installment divided by annual income and then sums that measure by loan-status set. It should not be interpreted as an average repayment-to-income ratio.
 
-Five map worksheets explore geographic patterns:
+## Tableau workbooks
 
-- **`Map - 1`:** State-level map using average annual income as color and size encodings.
-- **`Map - 1 (2)`:** Income map with a top-10-state filter ranked by average annual income.
-- **`Map - 3`:** Loan-amount map filtered to the six New England states: Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.
-- **`Map 2`:** Geographic comparison of average annual income.
-- **`Map 2 (2)`:** Layered map combining annual income with pie-chart marks for homeownership and average debt-to-income ratio.
+The project is saved in five original Tableau workbooks. The numbered filenames reflect the original development stages; together they form this portfolio case study.
 
-**Demonstrated skills:** Geographic fields, filled maps, filtered regional analysis, layered maps, and multivariate visual encodings.
+| Analysis stage | Workbook | Contents |
+| --- | --- | --- |
+| Data exploration | [Loan Exploration](workbooks/Assignment-02-Loan-Exploration.twbx) | 6 worksheets: groups, sets, calculations, loan bins, and parameter-driven Top N views |
+| Statistical analysis | [Income, Maps and Trends](workbooks/Assignment-03-Income-Maps-and-Trends.twb) | 6 worksheets: income comparisons, map, and payment-year analysis |
+| Borrower comparisons | [Borrower Comparisons](workbooks/Assignment-04-Borrower-Comparisons.twbx) | 2 worksheets: median rates and loan purpose comparisons |
+| Geographic insights | [Geographic Loan Analysis](workbooks/Assignment-05-Geographic-Loan-Analysis.twbx) | 5 worksheets: state maps, regional filtering, and layered geographic marks |
+| Interactive presentation | [Interactive Dashboards](workbooks/Assignment-06-Interactive-Dashboards.twbx) | 2 source worksheets and 5 dashboards, including navigation and a guided loan-analysis view |
 
-### Assignment 6 — Dashboard design and navigation
+**How to explore:** Download a packaged .twbx file and open it in Tableau Desktop. The Assignment 3 .twb is not packaged and may require reconnecting its original Excel source. The images on GitHub are static previews; native Tableau filters and navigation work inside the workbook.
 
-**Workbook:** [`Assignment-06-Interactive-Dashboards.twbx`](workbooks/Assignment-06-Interactive-Dashboards.twbx) (original filename: `Assingment 6.twbx`)
+## Complete visualization gallery
 
-Two underlying worksheets:
+All **22 screenshots** are actual outputs from the Tableau workbooks, rather than mockups or recreated charts.
 
-- **`Avg Monthly Installment by State`:** State-level comparison of average monthly installment, with a distinct-record-count mark label.
-- **`Loaned amount by state`:** Geographic view of total loan amount with state and loan-amount filters.
+### Dashboards and narrative (6)
 
-Five dashboard objects:
-
-| Dashboard | Role in the workbook |
+| Visualization | What it shows |
 | --- | --- |
-| `Dashboard 1` | Pairs the state loan-amount map with the monthly-installment comparison and filter controls |
-| `Dashboard 2` | Loan-information panel containing an embedded illustration and an external interest-rate webpage |
-| `Dashboard 3` | Table-of-contents/navigation-style layout |
-| `Dashboard 4` | Loan distribution view with a state filter and loan-amount legend |
-| `Loan Analysis` | Storyboard-style dashboard with navigation objects and explanatory text |
+| [Portfolio dashboard](screenshots/assignment-06/dashboard-1-map-and-installments.png) | Map, state selector, and monthly installment comparison |
+| [Loan distribution](screenshots/assignment-06/dashboard-4-loan-distribution.png) | Interactive lending-volume view by state |
+| [State loan map](screenshots/assignment-06/loaned-amount-by-state-map.png) | State-level total loan amounts |
+| [Monthly installments](screenshots/assignment-06/avg-monthly-installment-by-state.png) | Average installment and record counts by state |
+| [Dashboard navigation](screenshots/assignment-06/dashboard-3-table-of-contents.png) | Navigation menu for analysis views |
+| [Story conclusion](screenshots/assignment-06/story-conclusion.png) | Closing narrative and lending insights |
 
-**Demonstrated skills:** Dashboard layout, maps with quantitative color legends, cross-view presentation, filter controls, contextual text, and navigation design.
+### Exploratory and statistical views (7)
+
+| Visualization | What it shows |
+| --- | --- |
+| [Geographic clusters](screenshots/assignment-03/geographic-clusters.png) | State grouping with cluster coloring |
+| [Income comparison and reference line](screenshots/assignment-03/income-constant-reference-full.png) | Income by homeownership |
+| [Constant reference line detail](screenshots/assignment-03/income-constant-reference-detail.png) | Reference-line detail |
+| [Average, median and quartiles](screenshots/assignment-03/income-average-median-quartiles.png) | Distribution reference bands |
+| [Income interval view](screenshots/assignment-03/income-95-percent-interval.png) | Income comparison with a reference interval |
+| [Loan-grade and homeownership table](screenshots/assignment-03/loan-grade-homeownership-crosstab.png) | Categorical totals and cross-tabulation |
+| [Loan amount over payment years](screenshots/assignment-03/loan-amount-polynomial-line.png) | Time-based view with fitted trend (illustrative) |
+
+### Borrower comparisons (4)
+
+| Visualization | What it shows |
+| --- | --- |
+| [Interest rates by ownership and purpose](screenshots/assignment-04/interest-rates-homeownership-purpose.png) | Median interest-rate segmentation |
+| [Interest-rate comparison closeup](screenshots/assignment-04/interest-rates-homeownership-purpose-closeup.png) | Detail of segmented rates |
+| [Loan purpose comparison](screenshots/assignment-04/loan-purpose-marks-full.png) | Average loan amount and count encodings |
+| [Loan purpose closeup](screenshots/assignment-04/loan-purpose-marks-closeup.png) | Loan amount by purpose |
+
+### Geographic analytics (5)
+
+| Visualization | What it shows |
+| --- | --- |
+| [Annual income map](screenshots/assignment-05/annual-income-map-full.png) | Income patterns across states |
+| [Annual income map in Tableau](screenshots/assignment-05/annual-income-map-tableau-view.png) | Map setup in Tableau Desktop |
+| [Income choropleth](screenshots/assignment-05/annual-income-map-blue.png) | Continuous income color scale |
+| [Selected-state comparison](screenshots/assignment-05/income-selected-states.png) | Filtered state-level view |
+| [Layered state map](screenshots/assignment-05/income-homeownership-dti-layered.png) | Income, homeownership, and debt-to-income ratio |
 
 ## Skills demonstrated
 
-- Tableau data connection and worksheet design
-- Exploratory analysis and borrower segmentation
-- Calculated fields, custom groups/sets, $5,000 numeric bins, and Top N parameters
-- Aggregations: sum, median, mean, and distinct count
-- Geographic analysis and New England regional filters
-- Dual-axis/layered maps with pie-chart marks
-- Interactive dashboard layout and filter controls
-- Business-oriented data storytelling
+**Tableau** · **Interactive dashboards** · **Data storytelling** · **Data visualization** · **Calculated fields** · **Parameters** · **Top N filters** · **Groups and sets** · **Reference lines** · **State-level choropleth maps** · **Dual-axis/layered maps** · **Descriptive statistics** · **Borrower segmentation** · **Excel data connections**
 
-## Portfolio gallery — 22 Tableau screenshots
+## Project background and attribution
 
-The figures below are 22 actual screenshots of the Tableau workbooks, grouped by assignment. Screenshots illustrate worksheet outputs; they are not a substitute for interacting with the workbooks.
+**Analyst and dashboard creator:** Kushal Rajesh Sharma. I developed the visualizations as part of **ISOM 845 (Tableau) at Suffolk University** and organized the original coursework into this consolidated analytics portfolio project. The repository demonstrates my own Tableau analysis, dashboard construction, and presentation work; it is **not** a commissioned client engagement, a deployed lending product, or a validated credit-risk decision system.
 
-### Featured visualizations
+The owner has confirmed permission to share the dataset. Packaged .twbx files embed loan-level data. Third-party images or other externally licensed workbook content may have separate terms.
 
-**Interactive lending dashboard — state-level loan amounts and monthly installments (Assignment 6)**
+---
 
-![Tableau dashboard combining a U.S. state loan map, average monthly installments, and state filters](screenshots/assignment-06/dashboard-1-map-and-installments.png)
-
-
-**Geographic analysis — annual income, homeownership and debt-to-income ratio (Assignment 5)**
-
-![Layered state map showing average income, homeownership and debt-to-income ratio](screenshots/assignment-05/income-homeownership-dti-layered.png)
-
-**Geographic segmentation — clustered states (Assignment 3)**
-
-![U.S. states colored by Tableau-generated clusters](screenshots/assignment-03/geographic-clusters.png)
-
-**Borrower comparison — interest rates by homeownership and loan purpose (Assignment 4)**
-
-![Median loan interest rates segmented by homeownership and loan purpose](screenshots/assignment-04/interest-rates-homeownership-purpose.png)
-
-### All screenshots
-
-| Assignment | Screenshot | What it demonstrates |
-| --- | --- | --- |
-| 3 | [Income vs. a constant reference line](screenshots/assignment-03/income-constant-reference-full.png) | Reference line against category averages |
-| 3 | [Constant reference line detail](screenshots/assignment-03/income-constant-reference-detail.png) | Reference-line detail |
-| 3 | [Mean, median and quartile reference](screenshots/assignment-03/income-average-median-quartiles.png) | Distribution reference markers |
-| 3 | [Homeownership × loan grade table](screenshots/assignment-03/loan-grade-homeownership-crosstab.png) | Cross-tabulation and grand totals |
-| 3 | [95% interval view](screenshots/assignment-03/income-95-percent-interval.png) | Income comparison with reference interval |
-| 3 | [Geographic clusters](screenshots/assignment-03/geographic-clusters.png) | Cluster-based map coloring |
-| 3 | [Loan amount over last payment year](screenshots/assignment-03/loan-amount-polynomial-line.png) | Trendline illustration; avoid extrapolating beyond observed years |
-| 4 | [Loan purpose / marks](screenshots/assignment-04/loan-purpose-marks-full.png) | Average loan amount with other visual encodings |
-| 4 | [Loan purpose close-up](screenshots/assignment-04/loan-purpose-marks-closeup.png) | Average loan amount by purpose |
-| 4 | [Median interest rate by borrower segment](screenshots/assignment-04/interest-rates-homeownership-purpose.png) | Homeownership and loan-purpose comparisons |
-| 4 | [Interest rate chart close-up](screenshots/assignment-04/interest-rates-homeownership-purpose-closeup.png) | Focused comparison of median interest rates |
-| 5 | [Income by state](screenshots/assignment-05/annual-income-map-full.png) | Choropleth-style geographic mapping |
-| 5 | [Selected states](screenshots/assignment-05/income-selected-states.png) | Filtering states for focused analysis |
-| 5 | [Income map in blue](screenshots/assignment-05/annual-income-map-blue.png) | Continuous quantitative color legend |
-| 5 | [Layered income / homeownership / DTI](screenshots/assignment-05/income-homeownership-dti-layered.png) | Multiple marks layers and pie composition |
-| 5 | [Map in Tableau workspace](screenshots/assignment-05/annual-income-map-tableau-view.png) | Source field configuration and visual context |
-
-Assignment 2 is included as a **Tableau workbook file**; screenshots are now available for Assignments 3, 4, 5, and 6.
-
-### Assignment 6 — Dashboards and Tableau story
-
-The six screenshots below document the original interactive dashboards and story presentation from [Assignment 6](workbooks/Assignment-06-Interactive-Dashboards.twbx). They are static snapshots of Tableau views; the navigation buttons and state filters work when the workbook is opened in Tableau, not on GitHub.
-
-**Dashboard 1 — Map with monthly installment comparisons**
-
-![Loan dashboard displaying a U.S. map, bar chart of average monthly installments, and state selector](screenshots/assignment-06/dashboard-1-map-and-installments.png)
-
-**Dashboard 4 — Loan distribution by state**
-
-![Loan distribution dashboard with filled U.S. map, loaned amount legend and state selector](screenshots/assignment-06/dashboard-4-loan-distribution.png)
-
-| View | Preview | Analysis |
-| --- | --- | --- |
-| Monthly repayments | [Average installment by state](screenshots/assignment-06/avg-monthly-installment-by-state.png) | Compares average monthly installments and labeled borrower counts by state |
-| Geographic loan volume | [Loaned amount map](screenshots/assignment-06/loaned-amount-by-state-map.png) | Shows total loan amounts by state using a geographic color scale |
-| Navigation | [Dashboard table of contents](screenshots/assignment-06/dashboard-3-table-of-contents.png) | Color-coded buttons for navigating between dashboards |
-| Story conclusion | [Loan Analysis conclusion](screenshots/assignment-06/story-conclusion.png) | Summarizes geographic lending activity and contextualizes the dashboard findings |
-
-**Story conclusion**
-
-![Tableau Loan Analysis story conclusion discussing lending patterns in California, Texas, and New York](screenshots/assignment-06/story-conclusion.png)
-
-## Reproduce and explore
-
-1. Open the original `.twbx` files in a compatible version of Tableau Desktop.
-2. Inspect the worksheets in Assignments 2, 3, 4, and 5 (Assignment 3 needs the original Excel file re-linked).
-3. Open Assignment 6 and navigate its dashboard views.
-4. Review the filters, map layers, marks cards, and chosen aggregations.
-
-Figures in Key findings are approximate values read from the rendered views (Assignments 3, 4 and 5); confirm them in the workbooks before quoting them elsewhere.
-
-## Repository structure
-
-```text
-Tableau-Loan-Portfolio-Analytics/
-├── README.md
-├── .gitignore
-├── workbooks/
-│   ├── Assignment-02-Loan-Exploration.twbx
-│   ├── Assignment-03-Income-Maps-and-Trends.twb
-│   ├── Assignment-04-Borrower-Comparisons.twbx
-│   ├── Assignment-05-Geographic-Loan-Analysis.twbx
-│   └── Assignment-06-Interactive-Dashboards.twbx
-├── screenshots/
-│   ├── assignment-03/ (7 PNGs)
-│   ├── assignment-04/ (4 PNGs)
-│   ├── assignment-05/ (5 PNGs)
-│   └── assignment-06/ (6 PNGs)
-└── docs/
-    ├── workbook-inventory.csv
-    ├── resume-and-linkedin.md
-    └── data-sharing-and-publication.md
-```
-
-## Publication status
-
-- **Repository visibility:** Public; the project owner has confirmed permission to share the coursework dataset.
-- **Available:** Five original Tableau workbooks and 22 original screenshots, plus documentation.
-- **Note:** Tableau packaged `.twbx` files include source data. Third-party images and other bundled assets may have separate usage rights; confirm those as needed.
-- These materials show academic Tableau work, not production deployment or independently validated commercial outcomes.
+**[Back to top](#us-loan-portfolio-analytics--tableau)**
