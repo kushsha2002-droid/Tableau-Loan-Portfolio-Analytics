@@ -45,7 +45,8 @@ These are **descriptive observations from this dataset**, not population-wide le
 | Income differs by homeownership | Average annual income was approximately **$84K for mortgage holders** compared with **$39K for the NONE category**. |
 | Loan purpose is associated with different loan sizes | **Small-business loans** averaged around **$13K**, while debt consolidation had the highest observed record count (**19,776 loans**). |
 | Loan pricing varies by borrower segment | Median interest rates differed across loan purposes and homeownership categories, with some groups reaching approximately **15%**. |
-| Geographic variation is substantial | State maps revealed differences in average income, total loan amounts, and monthly installments. |
+| Total lending is concentrated in large states | The dataset totals approximately **$460.3M** in loaned amount; **California** leads at about **$81.8M** (7,429 borrowers). |
+| Monthly installments are fairly flat across states | Average monthly installments fall roughly between **$305 and $380** per state, so state totals are driven mainly by borrower counts. Alaska has the highest average installment but only **86 borrowers**. |
 | State views support targeted comparisons | The dashboard combines **loan volume**, **average monthly installment**, and record-count labels in one workflow. |
 
 ## Dashboard highlights
