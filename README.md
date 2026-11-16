@@ -4,6 +4,21 @@
 **Course:** ISOM 845 — Tableau, Suffolk University  
 **Project type:** Academic coursework (Assignments 2–6)
 
+> Tableau analysis of 42,535 U.S. loan records: who borrows, how much, and at what interest rate, across borrower income, homeownership, loan purpose and state. Built as coursework for ISOM 845 at Suffolk University.
+
+![Layered state map showing average income, homeownership and debt-to-income ratio](screenshots/assignment-05/income-homeownership-dti-layered.png)
+
+## Key findings
+
+Approximate values read from the rendered views (Assignments 3, 4 and 5).
+
+- **Income varies sharply by homeownership.** Average annual income is highest for mortgage holders (about $84K) and lowest for borrowers with no home ownership (about $39K).
+- **Small-business loans are the largest on average (about $13K)**, while debt consolidation has by far the most loans (19,776).
+- **Pricing differs by segment.** Small-business loans carry some of the highest median interest rates in the mortgage, own and rent groups (roughly 13%), and the "Other" homeownership group has the highest medians overall (up to roughly 15%).
+- **Geography.** New Mexico has the highest average income among states (about $82K); Maine and Indiana are among the lowest.
+
+**Dashboards:** Assignment 6 contains 5 interactive dashboards (state loan-amount map, monthly-installment comparison, loan distribution and a navigation-style storyboard). Open `workbooks/Assignment-06-Interactive-Dashboards.twbx` in Tableau Desktop.
+
 ## Project overview
 
 This project uses Tableau to explore U.S. loan data across borrower characteristics, loan purposes, geography, loan amounts, interest rates, and repayment measures. The work spans five Tableau workbooks (four packaged `.twbx` and one unpackaged `.twb`), progressing from foundational data exploration and parameterized filtering to comparative charts, geographic maps, and a multi-dashboard presentation.
@@ -168,7 +183,7 @@ Assignments 2 and 6 are included as **Tableau workbook files**; there are no scr
 3. Open Assignment 6 and navigate its dashboard views.
 4. Review the filters, map layers, marks cards, and chosen aggregations.
 
-The screenshots, view-level findings, and further interpretations should be based on the actual rendered Tableau views. No unverified numerical findings are asserted in this README.
+Figures in Key findings are approximate values read from the rendered views (Assignments 3, 4 and 5); confirm them in the workbooks before quoting them elsewhere.
 
 ## Repository structure
 
