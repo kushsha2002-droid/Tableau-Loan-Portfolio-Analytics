@@ -2,7 +2,7 @@
 
 **Tools:** Tableau Desktop, Microsoft Excel  
 **Course:** ISOM 845 — Tableau, Suffolk University  
-**Project type:** Academic coursework (Assignments 2, 4, 5, and 6)
+**Project type:** Academic coursework (Assignments 2–6)
 
 ## Project overview
 
@@ -20,7 +20,7 @@ The packaged source is `Loan_Cleaned_ISOM845.xlsx` (the Assignment 4 copy has a 
 | `Loan_Description` | Loan-status descriptions |
 | `State` | State abbreviations and full state names |
 
-**Data note:** The loan workbook contains record-level employment and borrower attributes. Before any public release, confirm that redistribution is permitted and that publishing the data is appropriate. A `.twbx` packaged workbook embeds the Excel dataset, so sharing the `.twbx` also shares those records. The full staging package includes the original workbooks and embedded dataset. **Keep the full repository private unless you have verified permission to distribute the dataset and bundled images.** A separate public-safe starter archive excludes all packaged workbooks.
+**Data note:** The project owner has confirmed permission to share the dataset. Packaged `.twbx` workbooks embed loan-level records, so users who download these files receive the underlying data. Any separately licensed third-party visuals should be reviewed independently.
 
 ## Workbook inventory
 
@@ -120,19 +120,46 @@ Five dashboard objects:
 - Interactive dashboard layout and filter controls
 - Business-oriented data storytelling
 
-## Screenshots and Tableau Public
+## Portfolio gallery — 16 Tableau screenshots
 
-Screenshots of the finished Tableau views can be added to `screenshots/` after opening the workbooks in Tableau. This repository does **not** include screenshots or a Tableau Public link, since neither has been supplied/verified.
+The figures below are actual screenshots of the Tableau workbooks, grouped by assignment. Screenshots illustrate worksheet outputs; they are not a substitute for interacting with the workbooks.
 
-Suggested screenshots:
+### Featured visualizations
 
-1. `assignment2-top-n.png` — Parameter-driven Top N analysis
-2. `assignment4-interest-rates.png` — Interest rates by borrower segment
-3. `assignment5-new-england-map.png` — New England geographic analysis
-4. `assignment5-layered-map.png` — Homeownership and debt-to-income map
-5. `assignment6-loan-dashboard.png` — State loan analysis dashboard
+**Geographic analysis — annual income, homeownership and debt-to-income ratio (Assignment 5)**
 
-If the data is approved for public distribution, the packaged workbook(s) or a Tableau Public visualization may be added. Otherwise, use authorized screenshots or aggregate-level visuals that do not expose loan-level records.
+![Layered state map showing average income, homeownership and debt-to-income ratio](screenshots/assignment-05/income-homeownership-dti-layered.png)
+
+**Geographic segmentation — clustered states (Assignment 3)**
+
+![U.S. states colored by Tableau-generated clusters](screenshots/assignment-03/geographic-clusters.png)
+
+**Borrower comparison — interest rates by homeownership and loan purpose (Assignment 4)**
+
+![Median loan interest rates segmented by homeownership and loan purpose](screenshots/assignment-04/interest-rates-homeownership-purpose.png)
+
+### All screenshots
+
+| Assignment | Screenshot | What it demonstrates |
+| --- | --- | --- |
+| 3 | [Income vs. a constant reference line](screenshots/assignment-03/income-constant-reference-full.png) | Reference line against category averages |
+| 3 | [Constant reference line detail](screenshots/assignment-03/income-constant-reference-detail.png) | Reference-line detail |
+| 3 | [Mean, median and quartile reference](screenshots/assignment-03/income-average-median-quartiles.png) | Distribution reference markers |
+| 3 | [Homeownership × loan grade table](screenshots/assignment-03/loan-grade-homeownership-crosstab.png) | Cross-tabulation and grand totals |
+| 3 | [95% interval view](screenshots/assignment-03/income-95-percent-interval.png) | Income comparison with reference interval |
+| 3 | [Geographic clusters](screenshots/assignment-03/geographic-clusters.png) | Cluster-based map coloring |
+| 3 | [Loan amount over last payment year](screenshots/assignment-03/loan-amount-polynomial-line.png) | Trendline illustration; avoid extrapolating beyond observed years |
+| 4 | [Loan purpose / marks](screenshots/assignment-04/loan-purpose-marks-full.png) | Average loan amount with other visual encodings |
+| 4 | [Loan purpose close-up](screenshots/assignment-04/loan-purpose-marks-closeup.png) | Average loan amount by purpose |
+| 4 | [Median interest rate by borrower segment](screenshots/assignment-04/interest-rates-homeownership-purpose.png) | Homeownership and loan-purpose comparisons |
+| 4 | [Interest rate chart close-up](screenshots/assignment-04/interest-rates-homeownership-purpose-closeup.png) | Focused comparison of median interest rates |
+| 5 | [Income by state](screenshots/assignment-05/annual-income-map-full.png) | Choropleth-style geographic mapping |
+| 5 | [Selected states](screenshots/assignment-05/income-selected-states.png) | Filtering states for focused analysis |
+| 5 | [Income map in blue](screenshots/assignment-05/annual-income-map-blue.png) | Continuous quantitative color legend |
+| 5 | [Layered income / homeownership / DTI](screenshots/assignment-05/income-homeownership-dti-layered.png) | Multiple marks layers and pie composition |
+| 5 | [Map in Tableau workspace](screenshots/assignment-05/annual-income-map-tableau-view.png) | Source field configuration and visual context |
+
+Assignments 2 and 6 are included as **Tableau workbook files**; there are no screenshots from those assignments in this gallery yet.
 
 ## Reproduce and explore
 
@@ -156,17 +183,18 @@ Tableau-Loan-Portfolio-Analytics/
 │   ├── Assignment-05-Geographic-Loan-Analysis.twbx
 │   └── Assignment-06-Interactive-Dashboards.twbx
 ├── screenshots/
-│   └── .gitkeep
+│   ├── assignment-03/ (7 PNGs)
+│   ├── assignment-04/ (4 PNGs)
+│   └── assignment-05/ (5 PNGs)
 └── docs/
     ├── workbook-inventory.csv
     ├── resume-and-linkedin.md
     └── data-sharing-and-publication.md
 ```
 
-*The initial public repository intentionally omits loan-level data, Tableau packaged workbooks, and third-party imagery pending review of sharing rights.*
-
 ## Publication status
 
-- **Full archive:** includes four original packaged workbooks and is suitable for a **private** repository until redistribution rights are verified.
-- **Public-safe archive:** documents the work without uploading the source data, packaged workbooks, or bundled stock image. Add screenshots only after reviewing what they reveal.
-- This README describes worksheet configuration; it does **not** claim verified business outcomes or findings beyond what can be established from workbook definitions.
+- **Repository visibility:** Public; the project owner has confirmed permission to share the coursework dataset.
+- **Available:** Five original Tableau workbooks and 16 original screenshots, plus documentation.
+- **Note:** Tableau packaged `.twbx` files include source data. Third-party images and other bundled assets may have separate usage rights; confirm those as needed.
+- These materials show academic Tableau work, not production deployment or independently validated commercial outcomes.

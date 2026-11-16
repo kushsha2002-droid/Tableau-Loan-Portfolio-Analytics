@@ -1,13 +1,10 @@
-# Data sharing and publication check
+# Dataset sharing and provenance
 
-The Tableau `.twbx` files embed `Loan_Cleaned_ISOM845.xlsx`, containing 42,535 loan-level records and fields such as `Company_name`, `Emp_ID`, `Annual_income`, financial amounts, credit metrics, and loan status. Assignment 6 also includes a third-party image embedded inside its packaged workbook. We cannot verify dataset licensing, privacy clearance, or image redistribution permissions from these files alone.
+This repository contains Tableau coursework and four packaged `.twbx` workbooks, each including an Excel loan dataset with record-level fields. The project owner has confirmed sharing permission for the dataset and has chosen to publish this repository publicly.
 
-**Recommended approach**
+## Important notes
 
-1. Put the **full** repository in **Private** visibility while reviewing rights.
-2. Ask the course instructor or original data publisher whether you may redistribute the loan dataset and bundled imagery in a public portfolio.
-3. If not approved, publish the public-safe version with authorized dashboard screenshots and high-level, non-identifying summaries only.
-4. Do not rely on `.gitignore` or deleting a file in a later commit to protect data already published: Git history may retain it.
-5. If you later approve public publication, you can create a fresh public repository from the safe version to avoid exposing private history.
-
-We have **not** asserted that this loan-level dataset is free for redistribution.
+- The original source data is embedded in packaged `.twbx` files; visitors can extract it.
+- Review separately any third-party images, maps, illustrations, and external resources included in workbook packages.
+- Do not infer that the source data is anonymous, freely licensed in all jurisdictions, or suitable for other uses from this repository alone.
+- If permission conditions change, remove the dataset from public access and consider repository history, mirrors and prior downloads.
